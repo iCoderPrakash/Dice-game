@@ -8,17 +8,17 @@ import Score from './components/Score'
 
 
 function App() {
- const [isGameStarted, setIsGameStarted] = useState(true);
+  const [isGameStarted, setIsGameStarted] = useState(false);
 
-    const toggleGamePlay=()=>{
-      setIsGameStarted((prev)=> !prev);
-    };
+  const toggleGamePlay = () => {
+    setIsGameStarted((prev) => !prev);
+  };
 
   return (
     <>
-    {isGameStarted ? <Playtime/> : <Stratgame toggle ={toggleGamePlay}
-    /> 
-    } 
+      {isGameStarted ? <Playtime /> : <Stratgame toggle={toggleGamePlay}
+      />
+      }
     </>
   );
 };
